@@ -61,6 +61,11 @@ return 'error';
 //   return "error"
 // }
 
+/**
+ * ask user question
+ * @param {string} quetion 
+ * @returns {string}
+ */
 const askUser = (quetion) => (confirm(quetion) ? "ok" : "error");
 
 console.log(askUser());
