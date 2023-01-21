@@ -8,7 +8,7 @@ const num3 = [35, 1];
 
 /**
  * return min and max value from array
- * @param  {...number} num
+ * @param  {number} num
  * @returns {number | []}
  */
 const getMinMaxValueFromArray = (num) => {
@@ -32,7 +32,7 @@ console.log(getMinMaxValueFromArray(num3));
  * @param  {...number} num
  * @returns {number | null}
  */
-const getMultipleAllNumbers = (num) => {
+const getMultipleAllNumbers = (...num) => {
     if (num.length === 0) {
         return null;
     }
@@ -40,9 +40,9 @@ const getMultipleAllNumbers = (num) => {
     return num.reduce((acc, current) => acc * current);
 };
 
-console.log(getMultipleAllNumbers(num));
-console.log(getMultipleAllNumbers(num2));
-console.log(getMultipleAllNumbers(num3));
+console.log(getMultipleAllNumbers(...num));
+console.log(getMultipleAllNumbers(...num2));
+console.log(getMultipleAllNumbers(...num3));
 
 /*
 3)переписати функцію, що нижче на функцію стрілку
